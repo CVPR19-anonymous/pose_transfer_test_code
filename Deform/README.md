@@ -11,7 +11,7 @@
 * tqdm
 
 ### Data preparation
-Download pose estimator (conversion of this https://github.com/ZheC/Realtime_Multi-Person_Pose_Estimation) [pose_estimator.h5](https://yadi.sk/d/blgmGpDi3PjXvK). Launch ```python compute_cordinates.py.``` It will compute human keypoints. Our estimations are given in ``DATA``.
+Download pose estimator (conversion of this https://github.com/ZheC/Realtime_Multi-Person_Pose_Estimation) [pose_estimator.h5](https://yadi.sk/d/blgmGpDi3PjXvK). Launch ```python compute_cordinates.py.``` It will compute human keypoints. Our estimations are given in ``DATA``, e.g. ``DATA/fashion-annotation-train.csv``.
 
 Create pairs dataset with ```python create_pairs_dataset.py```. It define pairs for training or testing. Samples can be seen in ``DATA/train_pairs.csv``.
 

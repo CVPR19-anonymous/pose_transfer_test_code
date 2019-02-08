@@ -7,7 +7,7 @@ import shutil
 #Fasion is folder with 2 subfolders (MAN, WOMEN)
 
 ids_for_test = 1000
-output_folder = 'fasion-dataset'
+output_folder = 'fashion-dataset'
 output_folder_test = os.path.join(output_folder, 'test')
 output_folder_train = os.path.join(output_folder, 'train')
 
@@ -22,7 +22,7 @@ def get_pose_name(image_path):
     return ''.join(path_names[4].split('_')[1:])
 
 images = []
-for root, _, files in os.walk('fasion'):
+for root, _, files in os.walk('fashion'):
     images += [os.path.join(root, name) for name in files]
 ids = {get_id(image_path) for image_path in images}
 
