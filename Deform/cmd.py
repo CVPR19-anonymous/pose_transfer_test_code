@@ -27,8 +27,8 @@ def args():
     parser.add_argument("--nn_loss_area_size", default=5, type=int, help="Use nearest neighbour loss")
     parser.add_argument("--use_validation", default=1, type=int, help="Use validation")
 
-    parser.add_argument('--dataset', default='fasion', choices=['market', 'fasion', 'fasion128', 'fasion128128'],
-                        help='Market or fasion')
+    parser.add_argument('--dataset', default='fashion', choices=['market', 'fashion', 'fashion128128'],
+                        help='Market or fashion')
 
     parser.add_argument("--display_ratio", default=1, type=int,  help='Number of epochs between ploting')
     parser.add_argument("--start_epoch", default=0, type=int, help='Start epoch for starting from checkpoint')
@@ -69,9 +69,9 @@ def args():
     args.pairs_file_train = 'data/' + args.dataset + '-pairs-train.csv'
     args.pairs_file_test = 'data/' + args.dataset + '-pairs-test.csv'
 
-    if args.dataset == 'fasion':
+    if args.dataset == 'fashion':
         args.image_size = (256, 256)
-    elif args.dataset == 'fasion128128':
+    elif args.dataset == 'fashion128128':
         args.image_size = (128, 128)
     else:
         args.image_size = (128, 64)
